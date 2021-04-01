@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Password Setting</title>
+  </head>
+  <body>
+
+    <div class="container text-center">
+
+      <h1> Random Password Generator </h1>
+      <form class="" action="{% url 'yourPassword' %}" method="get">
+
+        <select class="" name="pw_length">
+          <option name="4">4</option>
+          <option name="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8", selected="selected">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+        </select> Password Length
+        <br>
+        <input type="checkbox" name="doUppercase" value=""> Include Uppercase
+        <br>
+        <input type="checkbox" name="doNumbers" value=""> Include Numbers
+        <br>
+        <input type="checkbox" name="doSpecials" value=""> Include Special Characters
+        <br>
+        <input type="submit" class="btn btn-primary" name="" value="Genetate Password">
+
+        {% csrf_token %}
+      </form>
+      <a href="{% url 'HomePage' %}" class="btn btn-warning"> Back to Home Page </a>
+
+    </div>
+
+  </body>
+</html>
